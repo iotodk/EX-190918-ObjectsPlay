@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using ObjectsPlay.Objects;
+using ObjectsPlay.Data;
 
 namespace ObjectsPlay
 {
@@ -8,6 +9,25 @@ namespace ObjectsPlay
     {
         static void Main(string[] args)
         {
+            //get the list of persons
+            PersonData pData = new PersonData();
+            Person[] persons = pData.GetPersons();
+            //write the story of each person
+            for(int i = 0; i < persons.Length; i++)
+            {
+                Person temp = persons[i];
+                Console.WriteLine("My name is " + temp.FirstName + " " + temp.LastName);
+            }
+
+
+
+
+
+
+
+
+
+
             //instantiate the first car
             Car car1 = new Car();
             car1.Color = "red";
